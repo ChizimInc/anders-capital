@@ -37,3 +37,20 @@ a {
   background-color: #333843;
   color: #F9F9F9;
 }
+
+.navbar {
+  transition: all ease .65s;
+}
+
+.logo {
+  max-width: unset !important;
+  width: 135px;
+  height: 44px;
+}
+
+
+@media only screen and (max-width: 920px) {
+  .desktop-navbar {
+    display: none;
+  }
+}
