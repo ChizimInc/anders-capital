@@ -34,7 +34,7 @@ a {
 }
 
 .color-black-fill {
-  background-color: #333843;
+  background-color: #333843b3;
   color: #F9F9F9;
 }
 
@@ -50,6 +50,12 @@ a {
 
 
 @media only screen and (max-width: 920px) {
+  .desktop-navbar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 760px) {
   .desktop-navbar {
     display: none;
   }

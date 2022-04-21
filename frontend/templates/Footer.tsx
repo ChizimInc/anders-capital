@@ -3,7 +3,7 @@ import Image from "next/image";
 const Footer = () => (
   <div style={{backgroundColor: "#333843"}}>
     <div
-      className="container flex flex-col lg:flex-row py-5 justify-center items-center z-20 text-lg"
+      className="container flex flex-col lg:flex-row py-3 justify-center items-center z-20 text-lg"
       style={{ color: '#eeeeee' }}
     >
       <p>© Anders Capital Gmbh — 2020. All rights reserved.</p>
