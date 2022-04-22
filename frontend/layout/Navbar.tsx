@@ -75,7 +75,7 @@ export default function Navbar() {
     <>
       <div style={styles.container}>
         <div style={styles.image}>
-          <div className={`navbar z-50 w-full h-24 items-center px-5 flex ${backgroundColor}`}>
+          <div className={`navbar z-50 w-full h-20 items-center px-5 flex ${backgroundColor}`}>
             <nav className="flex justify-between items-end w-full z-20">
               <div>
                 <img alt='logo' src="/assets/images/logo-white.svg" className='logo' style={{width: '135px', height: '44px'}}/>
