@@ -17,7 +17,7 @@ export default function Navbar() {
   const styles = {
     container: {
       display: 'flex',
-      height: '100vh',
+      height: 'calc(100vh - 10px)',
     },
     image: {
       backgroundImage: 'url("/assets/images/home-banner.jpg")',
@@ -107,7 +107,7 @@ export default function Navbar() {
             
           </div>
           <div
-            className={`fixed lg:hidden inset-0 bg-gray-800 bg-opacity-50 ${isOpen ? 'block' : 'hidden'}`}
+            className={`fixed z-10 lg:hidden inset-0 bg-gray-800 bg-opacity-50 ${isOpen ? 'block' : 'hidden'}`}
           >
             <div className="bg-white text-primary-dark-blue flex flex-col text-center mx-5 my-20 py-4 rounded">
               {items.map( (item) => (
@@ -120,8 +120,11 @@ export default function Navbar() {
           </div>
           <div className='flex flex-col text-white w-full absolute top-0 h-full items-center justify-center'>
             <div className='flex flex-col justify-between items-center' style={{height: '330px'}}>
-              <div style={{width: '700px'}} className="flex flex-col items-center font-bold">
-                <div style={{fontSize: '2.5rem', lineHeight: '55px'}}>We will assist your business with innovation, achievement and grow!</div>
+              <div className="flex flex-col items-center font-bold text-center w-[384px] md:w-[700px]">
+                <div 
+                  style={{lineHeight: '55px'}}
+                  className="text-3xl md:text-[2.5rem]"
+                >We will assist your business with innovation, achievement and grow!</div>
                 <span className='block w-36 my-6' style={styles.span}></span>
                 <div className='text-xl'>Business strategies that actually work</div>
               </div>

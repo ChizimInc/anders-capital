@@ -60,3 +60,17 @@ a {
     display: none;
   }
 }
+
+@media only screen and (max-width: 546px) {
+  .imageAndTitle-borderImage {
+    width: unset !important;
+    height: unset !important;
+  }
+  .imageAndTitle-image {
+    width: 97% !important;
+    height: 81vw !important;
+    margin-left: 5px !important;
+    margin-top: 5px !important;
+    margin: 5px;
+  }
+}

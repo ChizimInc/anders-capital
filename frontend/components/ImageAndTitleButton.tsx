@@ -12,7 +12,7 @@ const styles = {
   }
 }
 
-const BannerButton = (props: IButtonProps) => {
+const ImageAndTitleButton = (props: IButtonProps) => {
   return (
     <>
       <div style={styles.container} className="py-3 px-6 font-bold">
@@ -22,4 +22,4 @@ const BannerButton = (props: IButtonProps) => {
   )
 }
 
-export { BannerButton }
+export { ImageAndTitleButton }
