@@ -123,10 +123,10 @@ export default function Navbar() {
           </div>
           <div className='flex flex-col text-white w-full absolute top-0 h-full items-center justify-center'>
             <div className='flex flex-col justify-between items-center' style={{height: '330px'}}>
-              <div className="flex flex-col items-center font-bold text-center w-[384px] md:w-[700px]">
+              <div className="flex flex-col items-center font-bold text-center w-[306px] md:w-[700px]">
                 <div 
                   style={{lineHeight: '55px', color: 'white'}}
-                  className="text-3xl md:text-[2.5rem]"
+                  className="text-2xl md:text-[2.5rem]"
                 >We will assist your business with innovation, achievement and grow!</div>
                 <span className='block w-36 my-6' style={styles.span}></span>
                 <div className='text-xl' style={{color: 'white'}}>Business strategies that actually work</div>

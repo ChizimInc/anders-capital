@@ -30,7 +30,6 @@ const ImageAndTitle = (props: IImageAndTitleProps) => {
     },
     text: {
       fontWeight: '700',
-      lineHeight: '57px'
     }
   }
   return (
@@ -55,7 +54,7 @@ const ImageAndTitle = (props: IImageAndTitleProps) => {
                 >Welcome to Anders Capital</div>
                 <div 
                   style={styles.text} 
-                  className="text-5xl"
+                  className="text-4xl md:text-5xl leading-[35px] md:leading-[57px]"
                 >
                     Comprehensive improvement of the financial aspects of your business.
                 </div>
