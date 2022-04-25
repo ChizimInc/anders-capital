@@ -13,23 +13,30 @@ export default function Navbar() {
   const span3 = useRef() as MutableRefObject<HTMLSpanElement>
 
   const backgroundColor = (router.pathname === '/') ? 'color-black-fill' : 'bg-white'
+  const homeBannerVisible = (router.pathname === '/') ? 'flex' : 'hidden'
+  const logo = (router.pathname === '/') ? 'logo-white.svg' : 'logo-black.svg'
+  const color = (router.pathname === '/') ? 'text-white' : 'text-black'
+  const isHome = (router.pathname === '/') ? true : false
 
   const styles = {
     container: {
       display: 'flex',
-      height: 'calc(100vh - 10px)',
+      height: isHome ? 'calc(100vh - 10px)': '',
     },
     image: {
-      backgroundImage: 'url("/assets/images/home-banner.jpg")',
+      backgroundImage: isHome ? 'url("/assets/images/home-banner.jpg")' : '',
       backgroundPosition: 'center',
       width: '100%',
-      height: 'calc(100vh - 10px)',
+      height: isHome ? 'calc(100vh - 10px)' : '',
       backgroundSize: 'cover',
-      position: 'absolute' as 'absolute',
+      position: isHome ? 'absolute' as 'absolute' : 'relative' as 'relative',
       top: '0',
     },
     span: {
       borderTop: '4px solid #B5363A'
+    },
+    burgherMenu: {
+      borderTopColor: isHome ? 'white' : 'black'
     }
   }
 
@@ -49,6 +56,11 @@ export default function Navbar() {
     span3.current.classList.remove('-rotate-[42deg]')
   }
 
+  const burgerClickItem = () => {
+    setIsOpen(false);
+    burgerClickClose();
+  }
+
   const items = [
     {
       title: 'About Us',
@@ -56,7 +68,7 @@ export default function Navbar() {
     },
     {
       title: 'Services',
-      link: '/services'
+      link: '/consulting'
     },
     {
       title: 'Specialists',
@@ -77,13 +89,15 @@ export default function Navbar() {
         <div style={styles.image}>
           <div className={`navbar z-50 w-full h-20 items-center px-5 flex ${backgroundColor}`}>
             <nav className="flex justify-between items-end w-full z-20">
-              <div>
-                <img alt='logo' src="/assets/images/logo-white.svg" className='logo' style={{width: '135px', height: '44px'}}/>
+              <div className='cursor-pointer'>
+                <Link href='/'>
+                  <img alt='logo' src={`/assets/images/${logo}`} className='logo' style={{width: '135px', height: '44px'}}/>
+                </Link>
               </div>
-              <div className="hidden lg:flex text-base w-full justify-center text-gray">
+              <div className={`hidden lg:flex text-base w-full justify-center ${color}`}>
                 {items.map( (item) => (
                   <Link href={item.link} key={item.link}>
-                    <a className="hover:text-black mx-10">{item.title}</a>
+                    <a className="hover:text-black mx-12">{item.title}</a>
                   </Link>
                 ))}
               </div>
@@ -97,9 +111,9 @@ export default function Navbar() {
                     style={{height: '21px'}} 
                     onClick={isOpen ? burgerClickClose : burgerClickOpen}
                   >
-                    <span ref={span1} className='block w-full border-t-[2px] rounded-full'></span>
-                    <span ref={span2} className='block w-full border-t-[2px] rounded-full'></span>
-                    <span ref={span3} className='block w-full border-t-[2px] rounded-full'></span>
+                    <span ref={span1} style={styles.burgherMenu} className='block w-full border-t-[2px] rounded-full'></span>
+                    <span ref={span2} style={styles.burgherMenu} className='block w-full border-t-[2px] rounded-full'></span>
+                    <span ref={span3} style={styles.burgherMenu} className='block w-full border-t-[2px] rounded-full'></span>
                   </div>
                 </button>
               </div>
@@ -115,13 +129,13 @@ export default function Navbar() {
             >
               {items.map( (item) => (
                 <Link href={item.link} key={item.link}>
-                  <a className="py-2" onClick={() => setIsOpen(false)}>{item.title}</a>
+                  <a className="py-2" onClick={burgerClickItem}>{item.title}</a>
                 </Link>
               ))}
             </div>
 
           </div>
-          <div className='flex flex-col text-white w-full absolute top-0 h-full items-center justify-center'>
+          <div className={`${homeBannerVisible} flex-col text-white w-full absolute top-0 h-full items-center justify-center`}>
             <div className='flex flex-col justify-between items-center' style={{height: '330px'}}>
               <div className="flex flex-col items-center font-bold text-center w-[306px] md:w-[700px]">
                 <div 
