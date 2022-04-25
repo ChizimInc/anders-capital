@@ -91,7 +91,7 @@ const CalendarAndContact = () => {
               {
                 calendar.map( (item) => (
                   <div>
-                    <div key={item.day} className="flex justify-between my-[6px] text-[11pt]">
+                    <div key={item.key} className="flex justify-between my-[6px] text-[11pt]">
                       <div>{item.day}</div>
                       <div>{item.hour}</div>
                     </div>

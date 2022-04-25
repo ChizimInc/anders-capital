@@ -109,7 +109,10 @@ export default function Navbar() {
           <div
             className={`fixed z-10 lg:hidden inset-0 bg-gray-800 bg-opacity-50 ${isOpen ? 'block' : 'hidden'}`}
           >
-            <div className="bg-white text-primary-dark-blue flex flex-col text-center mx-5 my-20 py-4 rounded">
+            <div 
+              className="text-primary-dark-blue flex flex-col text-center mx-5 my-20 py-4 rounded"
+              style={{backgroundColor: 'white'}}
+            >
               {items.map( (item) => (
                 <Link href={item.link} key={item.link}>
                   <a className="py-2" onClick={() => setIsOpen(false)}>{item.title}</a>
@@ -122,11 +125,11 @@ export default function Navbar() {
             <div className='flex flex-col justify-between items-center' style={{height: '330px'}}>
               <div className="flex flex-col items-center font-bold text-center w-[384px] md:w-[700px]">
                 <div 
-                  style={{lineHeight: '55px'}}
+                  style={{lineHeight: '55px', color: 'white'}}
                   className="text-3xl md:text-[2.5rem]"
                 >We will assist your business with innovation, achievement and grow!</div>
                 <span className='block w-36 my-6' style={styles.span}></span>
-                <div className='text-xl'>Business strategies that actually work</div>
+                <div className='text-xl' style={{color: 'white'}}>Business strategies that actually work</div>
               </div>
               <div>
                 <BannerButton title="Discover our services" />
