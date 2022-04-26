@@ -1,61 +1,6 @@
 import { AppConfig } from "../utils/AppConfig"
 import { AppColors } from "../utils/AppConfig"
-
-const calendar = [
-  {
-    key: 1,
-    day: 'Monday',
-    hour: '8 am - 19 pm'
-  },
-  {
-    key: 2,
-    day: 'Tuesday',
-    hour: '8 am - 19 pm'
-  },
-  {
-    key: 3,
-    day: 'Wednesday',
-    hour: '8 am - 19 pm'
-  },
-  {
-    key: 4,
-    day: 'Thursday',
-    hour: '8 am - 19 pm'
-  },
-  {
-    key: 5,
-    day: 'Friday',
-    hour: '8 am - 19 pm'
-  },
-  {
-    key: 6,
-    day: 'Saturday',
-    hour: '10 am - 14 pm'
-  },
-  {
-    key: 7,
-    day: 'Sunday',
-    hour: 'Closed'
-  },
-]
-
-const contact = [
-  {
-    title: 'Phone',
-    contact: AppConfig.phone,
-    action: 'Call us'
-  },
-  {
-    title: 'E-mail',
-    contact: AppConfig.email,
-    action: 'Send a message'
-  },
-  {
-    title: 'Adress',
-    contact: AppConfig.adress,
-    action: 'Get directions'
-  }
-]
+import { Calendar, Contact } from "../utils/AppData"
 
 const styles = {
   span: {
@@ -89,13 +34,13 @@ const CalendarAndContact = () => {
             </div>
             <div className="mt-7 ml-3">
               {
-                calendar.map( (item) => (
-                  <div>
-                    <div key={item.key} className="flex justify-between my-[6px] text-[11pt]">
+                Calendar.map( (item) => (
+                  <div key={item.key}>
+                    <div className="flex justify-between my-[6px] text-[11pt]">
                       <div>{item.day}</div>
                       <div>{item.hour}</div>
                     </div>
-                    {(item.key === calendar.length) ? '' : <span style={styles.spanGrayFull}></span>} 
+                    {(item.key === Calendar.length) ? '' : <span style={styles.spanGrayFull}></span>} 
                   </div>
                 ))
               }
@@ -108,8 +53,8 @@ const CalendarAndContact = () => {
             </div>
             <div className="pt-4 ml-3">
               {
-                contact.map( (item) => (
-                  <div className="py-2">
+                Contact.map( (item) => (
+                  <div className="py-2" key={item.title}>
                     <p className="text-[11pt]">{item.title}:</p>
                     <span style={styles.spanGray}></span>
                     <p className="text-[10pt]">{item.contact}</p>

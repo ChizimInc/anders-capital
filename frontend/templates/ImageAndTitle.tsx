@@ -35,17 +35,18 @@ const ImageAndTitle = (props: IImageAndTitleProps) => {
   return (
     <>
       <div style={styles.container}>
-        <div className="container py-16">
+        <div className="container py-16 imageAndTitle">
           <div className="flex justify-between flex-col-reverse lg:flex-row">
             <div 
               style={styles.borderImage} 
-              className="mt-16 lg:mt-0 imageAndTitle-borderImage"
+              className="mt-16 lg:mt-0 imageAndTitle-borderImage absolute"
             >
-              <div 
-                style={styles.image}
-                className="imageAndTitle-image"
-              ></div>
+              
             </div>
+            <div 
+              style={styles.image}
+              className="imageAndTitle-image z-10"
+            ></div>
             <div className="lg:w-1/3 xl:w-1/2 flex flex-col justify-center items-start">
               <div>
                 <div 

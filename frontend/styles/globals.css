@@ -69,6 +69,11 @@ a {
   height: 44px;
 }
 
+.imageAndTitle:hover .imageAndTitle-borderImage {
+  transition: 2s;
+  margin-left: -50px;
+}
+
 
 @media only screen and (max-width: 920px) {
   .desktop-navbar {
