@@ -1,5 +1,28 @@
 import { AppConfig } from "./AppConfig"
 
+export const NavbarItems = [
+  {
+    title: 'About Us',
+    link: '/about'
+  },
+  {
+    title: 'Services',
+    link: '/consulting'
+  },
+  {
+    title: 'Specialists',
+    link: '/specialists'
+  },
+  {
+    title: 'Partnership',
+    link: '/partnership'
+  },
+  {
+    title: 'Contact',
+    link: '/contact'
+  },
+]
+
 export const Calendar = [
   {
     key: 1,

@@ -8,7 +8,7 @@ const Banner = (props: IBannerProps) => {
     <>
       <div 
         style={{backgroundColor: '#333843'}}
-        className="w-full h-28 flex flex-col justify-center items-center text-white"
+        className="w-full h-28 flex flex-col justify-center items-center text-white mt-[80px]"
       >
         <div className="text-[21px] mb-1">{props.title}</div>
         <div className="text-[12px] mt-1 flex justify-center items-center">

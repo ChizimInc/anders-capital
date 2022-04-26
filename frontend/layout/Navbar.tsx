@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import React from 'react';
 import { useState, useRef, MutableRefObject } from 'react';
 import { useRouter } from 'next/router';
 import { BannerButton } from '../components/BannerButton';
+import { NavbarItems } from '../utils/AppData';
 
 export default function Navbar() {
   const router = useRouter()
@@ -17,11 +19,16 @@ export default function Navbar() {
   const logo = (router.pathname === '/') ? 'logo-white.svg' : 'logo-black.svg'
   const color = (router.pathname === '/') ? 'text-white' : 'text-black'
   const isHome = (router.pathname === '/') ? true : false
+  const isFixed = (router.pathname === '/') ? false : true
 
   const styles = {
     container: {
       display: 'flex',
+      width: '100%',
+      top: 0,
+      boxShadow: isFixed ? '0 0 8px 2px black' : '',
       height: isHome ? 'calc(100vh - 10px)': '',
+      position: isFixed ? 'fixed' as 'fixed' : 'relative' as 'relative'
     },
     image: {
       backgroundImage: isHome ? 'url("/assets/images/home-banner.jpg")' : '',
@@ -61,28 +68,7 @@ export default function Navbar() {
     burgerClickClose();
   }
 
-  const items = [
-    {
-      title: 'About Us',
-      link: '/about'
-    },
-    {
-      title: 'Services',
-      link: '/consulting'
-    },
-    {
-      title: 'Specialists',
-      link: '/specialists'
-    },
-    {
-      title: 'Partnership',
-      link: '/partnership'
-    },
-    {
-      title: 'Contact',
-      link: '/contact'
-    },
-  ]
+  
   return (
     <>
       <div style={styles.container}>
@@ -95,7 +81,7 @@ export default function Navbar() {
                 </Link>
               </div>
               <div className={`hidden lg:flex text-base w-full justify-center ${color}`}>
-                {items.map( (item) => (
+                {NavbarItems.map( (item) => (
                   <Link href={item.link} key={item.link}>
                     <a className="hover:text-black mx-12">{item.title}</a>
                   </Link>
@@ -127,7 +113,7 @@ export default function Navbar() {
               className="text-primary-dark-blue flex flex-col text-center mx-5 my-20 py-4 rounded"
               style={{backgroundColor: 'white'}}
             >
-              {items.map( (item) => (
+              {NavbarItems.map( (item) => (
                 <Link href={item.link} key={item.link}>
                   <a className="py-2" onClick={burgerClickItem}>{item.title}</a>
                 </Link>

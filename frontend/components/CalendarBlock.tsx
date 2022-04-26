@@ -24,8 +24,8 @@ const styles = {
 const CalendarBlock = () => {
   return (
     <>
-      <div className="container flex justify-center mt-10 mb-10 font-semibold">
-        <div className="w-full md:w-2/5 text-black shadow-2xl">
+      <div className="container flex justify-center mt-16 mb-24 font-semibold">
+        <div className="w-full md:w-2/5 text-black shadow-2xl border-b-2 border-b-slate-500">
           <div className="flex flex-col items-center justify-center text-[16pt]">
             <span style={styles.span}></span>
             <p className="mt-5">Business hours</p>
