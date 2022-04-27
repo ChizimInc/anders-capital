@@ -1,5 +1,6 @@
 import { Banner } from "../features/Banner"
 import { PageDescription } from "../features/PageDescription"
+import { Advisors } from "../templates/Advisors"
 
 const Specialist = () => {
   return (
@@ -11,6 +12,7 @@ const Specialist = () => {
         description="Financial consultation allows you to combine personal information about your company with our extensive experience 
         gained in international practices."
       />
+      <Advisors />
     </>
   )
 }

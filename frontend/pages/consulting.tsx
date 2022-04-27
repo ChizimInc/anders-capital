@@ -1,5 +1,6 @@
 import { Banner } from "../features/Banner"
 import { PageDescription } from "../features/PageDescription"
+import { ServicesCards } from "../templates/ServicesCards"
 
 const Consulting = () => {
   return (
@@ -12,6 +13,7 @@ const Consulting = () => {
         revolutionary and effective methods to achieve your goals. We can provide opportunities for investment in major projects 
         across Europe and Asia. As well, we can assist you in rising funds for business projects in different business sectors."
       />
+      <ServicesCards/>
     </>
   )
 }

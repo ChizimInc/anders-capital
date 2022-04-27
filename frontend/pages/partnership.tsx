@@ -10,7 +10,7 @@ const Partnership = () => {
         title="Our partners & projects" 
         header="Building strong partnerships that ensure the way to success!"
       />
-      <div className="container mb-10 flex justify-between">
+      <div className="container mb-10 flex flex-col md:flex-row justify-center items-center">
         <PartnershipLogoBlock 
           image="/assets/images/partnership/finhub-logo.svg" 
           title="Crowdfunding Company"
@@ -31,7 +31,7 @@ const Partnership = () => {
           owned by WINGS BUSINESS s.r.o."
         />
       </div>
-      <div className="container mb-10 flex justify-between">
+      <div className="container mb-10 flex flex-col md:flex-row justify-center items-center">
         <PartnershipLogoBlock 
           image="/assets/images/partnership/ekson-logo.svg" 
           title="Bio Energy Production"
@@ -51,7 +51,7 @@ const Partnership = () => {
           project in Uzbekistan."
         />
       </div>
-      <div className="container mb-10 flex justify-between">
+      <div className="container mb-10 flex flex-col md:flex-row justify-center items-center">
         <PartnershipLogoBlock 
           image="/assets/images/partnership/daac-hermes-logo.svg" 
           title="Car Showroom"
