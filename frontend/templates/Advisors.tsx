@@ -34,7 +34,7 @@ const Advisors = () => {
             <h2 className="flex justify-between background flex-wrap">
               {
                 advisorsArray.map( (item) => (
-                  <div className="w-28 flex my-4 md:my-0 flex-col items-center">
+                  <div key={item.title} className="w-28 flex my-4 md:my-0 flex-col items-center">
                     <div className="bg-white w-[5rem] flex justify-center">
                       <img 
                         alt="icon" 

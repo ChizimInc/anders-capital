@@ -40,7 +40,10 @@ const PartnershipLogoBlock = (props: IPartnershipProps) => {
   return (
     <>
       <div 
-        className="w-full sm:w-[400px] h-[180px] mx-3 my-5 md:my-0 flex flex-col items-center justify-center text-black" 
+        className="
+          w-full sm:w-[400px] h-[180px] mx-3 my-5 md:my-0 flex flex-col items-center 
+          justify-center text-black border-b-2 border-slate-700
+        " 
         style={styles.container}
         onMouseEnter={openHandler}
         onMouseLeave={closeHandler}

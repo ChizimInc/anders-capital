@@ -1,4 +1,4 @@
-import { ImageAndTitleButton } from "../components/ImageAndTitleButton";
+import { Button } from "../components/Button";
 
 type IImageAndTitleProps = {
   color?: string;
@@ -21,8 +21,6 @@ const ImageAndTitle = (props: IImageAndTitleProps) => {
       backgroundSize: 'cover',
       width: '478px',
       height: '442px',
-      marginLeft: '8px',
-      marginTop: '12px'
     },
     title: {
       color: '#B5363A',
@@ -36,17 +34,21 @@ const ImageAndTitle = (props: IImageAndTitleProps) => {
     <>
       <div style={styles.container}>
         <div className="container py-16 imageAndTitle">
-          <div className="flex justify-between flex-col-reverse lg:flex-row">
+          <div className="flex justify-between items-center flex-col-reverse lg:flex-row">
             <div 
               style={styles.borderImage} 
-              className="mt-16 lg:mt-0 imageAndTitle-borderImage absolute"
+              className="mt-16 lg:mt-0 imageAndTitle-borderImage absolute hidden lg:block"
             >
               
             </div>
+            <div className="lg:hidden mt-16 mb-8 lg:mb-0 w-full flex justify-center lg:justify-start">
+              <Button title="Find out more" link='/about' />
+            </div>
             <div 
               style={styles.image}
-              className="imageAndTitle-image z-10"
+              className="mt-[60px] imageAndTitle-image z-10 lg:mt-[12px]"
             ></div>
+            
             <div className="lg:w-1/3 xl:w-1/2 flex flex-col justify-center items-start">
               <div>
                 <div 
@@ -60,8 +62,8 @@ const ImageAndTitle = (props: IImageAndTitleProps) => {
                     Comprehensive improvement of the financial aspects of your business.
                 </div>
               </div>
-              <div className="mt-16">
-                <ImageAndTitleButton title="Find out more" />
+              <div className="hidden lg:flex mt-16 mb-8 lg:mb-0 w-full justify-center lg:justify-start">
+                <Button title="Find out more" link='/about' />
               </div>
             </div>
           </div>

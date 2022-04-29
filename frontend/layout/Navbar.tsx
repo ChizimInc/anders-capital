@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { useState, useRef, MutableRefObject } from 'react';
 import { useRouter } from 'next/router';
-import { BannerButton } from '../components/BannerButton';
+import { Button } from '../components/Button';
 import { NavbarItems } from '../utils/AppData';
 
 export default function Navbar() {
@@ -26,6 +26,7 @@ export default function Navbar() {
       display: 'flex',
       width: '100%',
       top: 0,
+      zIndex: '50',
       boxShadow: isFixed ? '0 0 8px 2px black' : '',
       height: isHome ? 'calc(100vh - 10px)': '',
       position: isFixed ? 'fixed' as 'fixed' : 'relative' as 'relative'
@@ -131,8 +132,8 @@ export default function Navbar() {
                 <span className='block w-36 my-6' style={styles.span}></span>
                 <div className='text-xl' style={{color: 'white'}}>Business strategies that actually work</div>
               </div>
-              <div>
-                <BannerButton title="Discover our services" />
+              <div className='mt-16 md:mt-0'>
+                <Button title="Discover our services" link='/consulting' />
               </div>
             </div>
           </div>

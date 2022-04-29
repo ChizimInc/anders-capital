@@ -108,8 +108,8 @@ h2.background {
   .imageAndTitle-image {
     width: 97% !important;
     height: 81vw !important;
-    margin-left: 5px !important;
-    margin-top: 5px !important;
-    margin: 5px;
+  }
+  .background:before {
+    border-top: none;
   }
 }

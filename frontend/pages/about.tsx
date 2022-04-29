@@ -1,5 +1,7 @@
 import { Banner } from "../features/Banner"
 import { PageDescription } from "../features/PageDescription"
+import { ImageAndTextbook } from "../templates/ImageAndTextbook"
+import { AppColors } from "../utils/AppConfig"
 
 const AboutUs = () => {
   return (
@@ -13,6 +15,7 @@ const AboutUs = () => {
         Anders Capital can assist your business on any step of its existence in terms of financial, development or managerial 
         perspective.We offer a wide range of financial services, that insure high quality and loyalty to our customers."
       />
+      <ImageAndTextbook color={AppColors.whiteGray} />
     </>
   )
 }
