@@ -46,7 +46,7 @@ const ImageAndTitle = (props: IImageAndTitleProps) => {
             </div>
             <div 
               style={styles.image}
-              className="mt-[60px] imageAndTitle-image z-10 lg:mt-[12px]"
+              className="mt-[60px] imageAndTitle-image z-10 lg:ml-5 lg:mt-[12px]"
             ></div>
             
             <div className="lg:w-1/3 xl:w-1/2 flex flex-col justify-center items-start">

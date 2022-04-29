@@ -56,7 +56,7 @@ const PartnershipLogoBlock = (props: IPartnershipProps) => {
           <p>{props.title}</p>
         </div>
         <motion.div 
-          className={`${isOpen ? 'flex' : 'hidden'} p-2 text-[12px] text-white h-full items-center justify-center`} 
+          className={`${isOpen ? 'flex' : 'hidden'} p-2 text-[12px] text-white h-full items-center justify-center z-50`} 
           style={{backgroundColor: AppColors.black}}
           ref={textContainerRef} 
           initial="hidden"

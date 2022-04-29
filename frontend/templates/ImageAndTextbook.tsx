@@ -84,7 +84,7 @@ const ImageAndTextbook = (props: IImageAndTitleProps) => {
             </div>
             <div 
               style={styles.image}
-              className="imageAndTitle-image z-10"
+              className="imageAndTitle-image z-10 lg:ml-5"
             ></div>
             <div className="lg:w-1/3 xl:w-1/2 flex flex-col py-5 text-black items-start">
               {

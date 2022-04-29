@@ -35,7 +35,7 @@ const ServicesCard = (props: IServicesProps) => {
         onMouseEnter={animateHandler}
         onMouseLeave={animateHandler}
       >
-        <div className="flex justify-evenly items-center">
+        <div className="flex justify-evenly md:my-3 items-center">
           <div className="w-full flex items-center">
             <span className={`block h-6 border-r-4 mr-4 ${animate ? 'border-slate-100' : 'border-slate-900'}`}></span>
             <p className="text-base md:text-[0.8rem] lg:text-xl">{props.title}</p>
