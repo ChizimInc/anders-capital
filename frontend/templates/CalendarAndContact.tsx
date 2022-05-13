@@ -58,12 +58,6 @@ const CalendarAndContact = () => {
                     <p className="text-[11pt]">{item.title}:</p>
                     <span style={styles.spanGray}></span>
                     <p className="text-[10pt]">{item.contact}</p>
-                    <div className="text-[11pt]">
-                      <p 
-                        style={{color: AppColors.red}}
-                        className="cursor-pointer"
-                      >{item.action}</p>
-                    </div>
                   </div>
                 ))
               }
