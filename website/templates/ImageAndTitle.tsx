@@ -42,7 +42,15 @@ const ImageAndTitle = (props: IImageAndTitleProps) => {
               
             </div>
             <div className="lg:hidden mt-16 mb-8 lg:mb-0 w-full flex justify-center lg:justify-start">
-              <Button title="Find out more" link='/about' />
+              <Button 
+                title="Find out more" 
+                link='/about' 
+                animate='left'
+                mainBgColor='#B5363A'
+                animateBgColor='#333843'
+                mainFontColor='#FFFFFF'
+                animateFontColor='#FFFFFF'
+              />
             </div>
             <div 
               style={styles.image}
@@ -53,7 +61,7 @@ const ImageAndTitle = (props: IImageAndTitleProps) => {
               <div>
                 <div 
                   style={styles.title}
-                  className="ml-3"
+                  className="ml-[9px]"
                 >Welcome to Anders Capital</div>
                 <div 
                   style={styles.text} 
@@ -63,7 +71,15 @@ const ImageAndTitle = (props: IImageAndTitleProps) => {
                 </div>
               </div>
               <div className="hidden lg:flex mt-16 mb-8 lg:mb-0 w-full justify-center lg:justify-start">
-                <Button title="Find out more" link='/about' />
+                <Button 
+                  title="Find out more" 
+                  link='/about' 
+                  animate='left'
+                  mainBgColor='#B5363A'
+                  animateBgColor='#333843'
+                  mainFontColor='#FFFFFF'
+                  animateFontColor='#FFFFFF'
+                />
               </div>
             </div>
           </div>

@@ -21,6 +21,7 @@ const TeamRow = () => {
             image="/assets/images/team/Finhub2810.jpg"
             name="Arteom Cebanu"
             position="Director of Corporate Affairs"
+            link="https://www.linkedin.com/in/artiom-cebanu-fhcf-fhss/"
             margin
           />
           
@@ -28,6 +29,7 @@ const TeamRow = () => {
             image="/assets/images/team/Finhub2762.jpg"
             name="Dorian Bujor"
             position="Chief Sales Officer"
+            link="https://www.linkedin.com/in/dorianbujor/"
           />
         </div>
       </div>

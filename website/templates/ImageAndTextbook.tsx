@@ -45,17 +45,17 @@ const ImageAndTextbook = (props: IImageAndTitleProps) => {
       color: '#333843'
     },
     borderImage: {
-      width: '400px',
-      height: '475px',
+      width: '396px',
+      height: '493px',
       border: '7px solid #333843'
     },
     image: {
       backgroundImage: 'url("/assets/images/home-image.svg")',
       backgroundPosition: 'center',
       backgroundSize: 'cover',
-      width: '478px',
-      height: '442px',
-      marginTop: '12px'
+      width: '434px',
+      height: '471px',
+      marginTop: '7px'
     },
     title: {
       color: '#B5363A',
@@ -63,12 +63,6 @@ const ImageAndTextbook = (props: IImageAndTitleProps) => {
     },
     text: {
       fontWeight: '700',
-    },
-    span: {
-      display: 'block',
-      borderLeft: `3.5px solid ${AppColors.red}`,
-      height: '24px',
-      marginRight: '7px',
     },
   }
   return (
@@ -94,7 +88,12 @@ const ImageAndTextbook = (props: IImageAndTitleProps) => {
                     onClick={() => openHandler(item.id)}
                   >
                     <div className="flex items-center text-[16pt] cursor-pointer">
-                      <span style={styles.span}></span>
+                      <span 
+                        className="block h-[24px] mr-[7px]"
+                        style={{
+                          borderLeft: `3.5px solid ${isActive == item.id ? AppColors.red : AppColors.black}`
+                        }}
+                      ></span>
                       <p className="font-semibold">{item.title}</p>
                     </div>
                     <div className={`${isActive == item.id ? 'block' : 'hidden'}`}>
@@ -104,6 +103,12 @@ const ImageAndTextbook = (props: IImageAndTitleProps) => {
                         ))
                       }
                     </div>
+                    <span 
+                      className={`
+                        block w-full h-1 border-t-[1px] 
+                        ${isActive == item.id ? 'border-t-app-color-400' : 'border-t-app-color-300'} 
+                      `}
+                    ></span>
                   </div>
                 ))
               }

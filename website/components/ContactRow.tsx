@@ -22,10 +22,6 @@ const ContactRow = () => {
               >
                 <div className="">
                   <p className="text-[10pt]">{item.contact}</p>
-                  <p 
-                    style={{color: AppColors.red}}
-                    className="cursor-pointer text-[11pt]"
-                  >{item.action}</p>
                 </div>
               </div>
             ))

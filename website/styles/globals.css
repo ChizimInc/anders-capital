@@ -68,6 +68,10 @@ a {
   height: 44px;
 }
 
+.imageAndTitle-borderImage {
+  transition: 2s;
+}
+
 .imageAndTitle:hover .imageAndTitle-borderImage {
   transition: 2s;
   margin-left: -50px;

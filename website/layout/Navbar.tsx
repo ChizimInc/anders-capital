@@ -8,6 +8,7 @@ import { NavbarItems } from '../utils/AppData';
 export default function Navbar() {
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false);
+  const [itemHover, setItemHover] = useState(0);
   
 
   const span1 = useRef() as MutableRefObject<HTMLSpanElement>
@@ -26,8 +27,8 @@ export default function Navbar() {
       display: 'flex',
       width: '100%',
       top: 0,
-      zIndex: '50',
-      boxShadow: isFixed ? '0 0 8px 2px black' : '',
+      zIndex: '500',
+      boxShadow: isFixed ? '0 0 8px -2px black' : '',
       height: isHome ? 'calc(100vh - 10px)': '',
       position: isFixed ? 'fixed' as 'fixed' : 'relative' as 'relative'
     },
@@ -74,7 +75,7 @@ export default function Navbar() {
     <>
       <div style={styles.container}>
         <div style={styles.image}>
-          <div className={`navbar z-50 w-full h-20 items-center px-5 flex ${backgroundColor}`}>
+          <div className={`navbar z-50 w-full h-[90px] items-center px-5 flex ${backgroundColor}`}>
             <nav className="flex justify-between items-end w-full z-20">
               <div className='cursor-pointer'>
                 <Link href='/'>
@@ -83,9 +84,25 @@ export default function Navbar() {
               </div>
               <div className={`hidden lg:flex text-base w-full justify-center ${color}`}>
                 {NavbarItems.map( (item) => (
-                  <Link href={item.link} key={item.link}>
-                    <a className="hover:text-black mx-12">{item.title}</a>
-                  </Link>
+                  <div 
+                    className='flex relative items-end'
+                    onMouseEnter={() => setItemHover(item.id)}
+                    onMouseLeave={() => setItemHover(0)}
+                    key={item.id}
+                  >
+                    <Link href={item.link} key={item.link}>
+                      <a className="mx-12">{item.title}</a>
+                    </Link>
+                    <div className='flex justify-center absolute bottom-[-23px] w-full'>
+                      <div 
+                        className={`
+                          duration-150 w-[68px]
+                          ${isHome ? 'bg-white' : 'bg-[#333843]'}  
+                          ${itemHover == item.id ? 'h-[16px]' : 'h-[0px]'}`
+                        }
+                      ></div>
+                    </div>
+                  </div>
                 ))}
               </div>
               <div style={{height: '43px'}} className="flex items-center">
@@ -133,7 +150,15 @@ export default function Navbar() {
                 <div className='text-xl' style={{color: 'white'}}>Business strategies that actually work</div>
               </div>
               <div className='mt-16 md:mt-0'>
-                <Button title="Discover our services" link='/consulting' />
+                <Button 
+                  title="Discover our services" 
+                  link='/consulting'
+                  animate='bottom'
+                  mainBgColor='#B5363A'
+                  animateBgColor='#FFFFFF'
+                  mainFontColor='#FFFFFF'
+                  animateFontColor='#333843'
+                />
               </div>
             </div>
           </div>
