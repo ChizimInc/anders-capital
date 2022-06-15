@@ -1,5 +1,6 @@
 import { AppColors } from "../utils/AppConfig"
 import { MutableRefObject, useRef, useState } from "react";
+import Image from 'next/image'
 
 type IServicesProps = {
   image: string;
@@ -42,11 +43,13 @@ const ServicesCard = (props: IServicesProps) => {
               <p className="text-base md:text-[0.8rem] lg:text-xl">{props.title}</p>
             </div>
             <div className="flex flex-col w-16 items-end h-[75px] justify-center">
-              <img 
+              <Image
                 src={props.image} 
                 alt="logo" 
                 className="mr-5" 
                 style={styles.imageFilter}
+                width={100}
+                height={70}
               />
             </div>
           </div>

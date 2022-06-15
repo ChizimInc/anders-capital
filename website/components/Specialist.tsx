@@ -1,5 +1,6 @@
 import { AppColors } from "../utils/AppConfig";
 import { useState } from "react"
+import Image from 'next/image'
 
 type ISpecialistProps = {
   image: string;
@@ -34,6 +35,7 @@ const Specialist = (props: ISpecialistProps) => {
         <div className="flex flex-col items-center relative">
           <a 
             target="_blank" 
+            rel="noreferrer"
             href={props.link} 
             className={`z-30 ${props.link && 'cursor-pointer' }`}>
             <div 
@@ -42,7 +44,7 @@ const Specialist = (props: ISpecialistProps) => {
               }} 
               className="flex z-30 justify-center items-center p-[0.35rem] h-[30px] mt-[-17px] border-2 transition"
             >
-              <img alt="in" src="/assets/icons/in.svg" className="w-[80%]"/>
+              <Image alt="in" src="/assets/icons/in.svg" width={20} height={13}/>
             </div>
           </a>
           <p 

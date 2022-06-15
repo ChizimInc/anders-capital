@@ -22,7 +22,7 @@ const Button = (props: IButtonProps) => {
 
   return (
     <>
-      <Link href={props.link}>
+      <Link href={props.link} passHref>
         <div 
           className={`
             py-3 px-6 ease-in duration-300 relative
