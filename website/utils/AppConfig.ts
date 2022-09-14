@@ -1,7 +1,7 @@
 export const AppConfig = {
     site_name: 'FinhubAC',
-    title: 'Finhub Anders Capital',
-    description: 'Finhub Anders Capital',
+    title: 'Anders Capital',
+    description: 'Anders Capital',
     locale: 'en',
     phone: '+43 676 4260422',
     email: 'anders@anderscapital.eu',
