@@ -16,7 +16,7 @@ const Imprint = () => {
                 <p>Company nr. FN 529227 a</p>
               </div>
               <div>
-                <p>Address: Beatrixgasse 27-2-15, 1030 Wien, Austria</p>
+                <p>Address: Kärntner Ring 14, Top 11, 1010 Wien, Austria</p>
               </div>
               <div>Vitali Chebanu, Geschäftsführer</div>
             </div>

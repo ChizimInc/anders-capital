@@ -70,6 +70,13 @@ const Partnership = () => {
           with the Italian company TECNOGEN."
         />
       </div>
+      <div className="container mb-10 flex flex-col md:flex-row justify-center items-center">
+        <PartnershipLogoBlock 
+          image="/assets/images/partnership/kodeson.svg" 
+          title="Product Development"
+          text="Kodeson is an expert team with over 10 years of experience in software development that adjusts to your specific needs without wasting your time."
+        />
+      </div>
     </>
   )
 }
