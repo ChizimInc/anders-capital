@@ -5,7 +5,7 @@ export const AppConfig = {
     locale: 'en',
     phone: '+43 676 4260422',
     email: 'anders@anderscapital.eu',
-    adress: 'Beatrixgasse 27, 1030 Wien, Austria'
+    adress: 'Kärntner Ring 14, Top 11, 1010 Wien, Austria'
 };
 
 export const AppColors = {
