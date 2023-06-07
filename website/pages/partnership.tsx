@@ -76,6 +76,11 @@ const Partnership = () => {
           title="Product Development"
           text="Kodeson is an expert team with over 10 years of experience in software development that adjusts to your specific needs without wasting your time."
         />
+        <PartnershipLogoBlock 
+          image="/assets/images/partnership/fhss.svg" 
+          title="Consulting Company"
+          text="Finhub Scaling Solutions is a B2B consulting company, offering a broad range of professional services, primarily within Sales, IT and Finances & Legal. Based on our experience of over a decade within the EU market and highly skillful and dedicated team of experts, we deliver personalized and cost-effective solutions to our customers. "
+        />
       </div>
     </>
   )
